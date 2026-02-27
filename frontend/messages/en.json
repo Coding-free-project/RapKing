@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Home",
+    "articles": "News",
+    "artists": "Artists",
+    "clips": "Clips",
+    "contact": "Contact",
+    "search": "Search..."
+  },
+  "home": {
+    "latestArticles": "Latest news",
+    "latestClips": "Latest clips",
+    "seeAll": "See all",
+    "heroTitle": "Raw rap news.",
+    "heroSubtitle": "News, interviews, artist profiles and clips in one place."
+  },
+  "articles": {
+    "title": "News",
+    "all": "All",
+    "news": "News",
+    "interviews": "Interviews",
+    "noArticles": "No articles yet.",
+    "readMore": "Read more",
+    "by": "By",
+    "publishedOn": "Published on"
+  },
+  "artists": {
+    "title": "Artists",
+    "noArtists": "No artists yet.",
+    "articles": "Articles",
+    "clips": "Clips",
+    "seeArticles": "See articles",
+    "seeClips": "See clips"
+  },
+  "clips": {
+    "title": "Clips",
+    "noClips": "No clips yet.",
+    "filterByArtist": "Filter by artist",
+    "allArtists": "All artists",
+    "newest": "Newest",
+    "oldest": "Oldest",
+    "watchOn": "Watch on YouTube"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search an article, artist, clip...",
+    "results": "Results for",
+    "noResults": "No results for",
+    "articles": "Articles",
+    "artists": "Artists",
+    "clips": "Clips",
+    "searching": "Searching..."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "A question? A suggestion? Write to us.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Your message has been sent. Thank you!",
+    "error": "An error occurred. Please try again.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "subjectPlaceholder": "Message subject",
+    "messagePlaceholder": "Your message..."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "share": "Share",
+    "copied": "Link copied!",
+    "readMore": "Read more",
+    "seeMore": "See more",
+    "backToList": "Back",
+    "page": "Page",
+    "of": "of"
+  },
+  "footer": {
+    "tagline": "The French rap reference",
+    "rights": "All rights reserved"
+  },
+  "seo": {
+    "homeTitle": "RapKing — Rap News, Artists and Clips",
+    "homeDescription": "RapKing is the reference for rap news: articles, interviews, artist profiles and YouTube clips all in one place.",
+    "articlesTitle": "Rap News — RapKing",
+    "artistsTitle": "Rap Artists — RapKing",
+    "clipsTitle": "Rap Clips — RapKing",
+    "searchTitle": "Search — RapKing",
+    "contactTitle": "Contact — RapKing"
+  }
+}

@@ -1,0 +1,122 @@
+// RapKing — Prisma Schema V1
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Category {
+  news
+  interview
+}
+
+enum Lang {
+  fr
+  en
+}
+
+enum AdType {
+  image
+  script
+}
+
+enum AdPosition {
+  top_banner
+}
+
+enum Role {
+  admin
+  editor
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  role      Role     @default(admin)
+  createdAt DateTime @default(now())
+
+  @@map("users")
+}
+
+model Artist {
+  id        String    @id @default(cuid())
+  name      String
+  slug      String    @unique
+  photo     String?
+  country   String?
+  bio       String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  articles  Article[]
+  clips     Clip[]
+
+  @@map("artists")
+}
+
+model Article {
+  id              String    @id @default(cuid())
+  title           String
+  slug            String    @unique
+  content         String
+  coverImage      String?
+  category        Category  @default(news)
+  published       Boolean   @default(false)
+  publishedAt     DateTime?
+  lang            Lang      @default(fr)
+  metaTitle       String?
+  metaDescription String?
+  artistId        String?
+  artist          Artist?   @relation(fields: [artistId], references: [id])
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("articles")
+}
+
+model Clip {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  youtubeUrl  String
+  youtubeId   String
+  artistId    String
+  artist      Artist   @relation(fields: [artistId], references: [id])
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("clips")
+}
+
+model Advertisement {
+  id         String     @id @default(cuid())
+  name       String
+  type       AdType     @default(image)
+  imageUrl   String?
+  linkUrl    String?
+  scriptCode String?
+  position   AdPosition @default(top_banner)
+  isActive   Boolean    @default(false)
+  startDate  DateTime?
+  endDate    DateTime?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  @@map("advertisements")
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@map("contact_messages")
+}
