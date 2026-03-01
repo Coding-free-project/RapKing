@@ -56,7 +56,7 @@ async function bootstrap() {
 
   const port = process.env.PORT || 3001;
   await app.listen(port);
-  console.log(`RapKing API running on: http://localhost:${port}/api/v1`);
+  console.log(`RapKing API running on port ${port} — /api/v1`);
 }
 
 bootstrap();
