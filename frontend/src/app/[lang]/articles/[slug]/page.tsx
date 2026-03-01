@@ -99,7 +99,7 @@ export default async function ArticlePage({ params: { lang, slug } }: ArticlePag
 
         {/* Cover image */}
         {article.coverImage && (
-          <div className="relative ratio-16-9 mb-8 overflow-hidden">
+          <div className="relative ratio-16-9 mb-8 overflow-hidden rounded-xl">
             <Image
               src={article.coverImage}
               alt={article.title}
