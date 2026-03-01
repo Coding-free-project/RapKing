@@ -32,7 +32,7 @@ export default function ArticleCard({ article, lang, variant = 'default' }: Arti
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6">
             <Badge className="mb-3">{article.category === 'news' ? t('news') : t('interviews')}</Badge>
-            <h2 className="font-bebas text-3xl md:text-4xl text-white leading-tight">
+            <h2 className="font-bebas text-3xl md:text-4xl text-white leading-none">
               {article.title}
             </h2>
             {article.publishedAt && (

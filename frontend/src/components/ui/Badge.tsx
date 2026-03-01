@@ -10,7 +10,7 @@ export default function Badge({ children, variant = 'default', className }: Badg
   return (
     <span
       className={cn(
-        'inline-block text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5',
+        'inline-block text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded',
         variant === 'default' && 'bg-black text-white',
         variant === 'outline' && 'border border-[#CCCCCC] text-[#555555]',
         className,

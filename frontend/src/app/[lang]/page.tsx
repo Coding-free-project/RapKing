@@ -30,7 +30,7 @@ export default async function HomePage({ params: { lang } }: HomeProps) {
   const t = await getTranslations({ locale: lang, namespace: 'home' })
 
   const [articlesRes, clipsRes] = await Promise.allSettled([
-    getArticles({ page: 1, limit: 6, lang }),
+    getArticles({ page: 1, limit: 6 }),
     getClips({ page: 1, limit: 6 }),
   ])
 
@@ -54,7 +54,7 @@ export default async function HomePage({ params: { lang } }: HomeProps) {
       {/* Latest articles */}
       <section className="mb-14">
         <div className="flex items-baseline justify-between mb-6 border-b border-[#CCCCCC] pb-3">
-          <h2 className="font-bebas text-3xl tracking-wide">{t('latestArticles')}</h2>
+          <h2 className="font-bebas text-3xl tracking-tight">{t('latestArticles')}</h2>
           <Link href={`/${lang}/articles`} className="text-xs uppercase tracking-widest text-[#555555] hover:text-black transition-colors">
             {t('seeAll')} →
           </Link>
@@ -76,7 +76,7 @@ export default async function HomePage({ params: { lang } }: HomeProps) {
       {/* Latest clips */}
       <section>
         <div className="flex items-baseline justify-between mb-6 border-b border-[#CCCCCC] pb-3">
-          <h2 className="font-bebas text-3xl tracking-wide">{t('latestClips')}</h2>
+          <h2 className="font-bebas text-3xl tracking-tight">{t('latestClips')}</h2>
           <Link href={`/${lang}/clips`} className="text-xs uppercase tracking-widest text-[#555555] hover:text-black transition-colors">
             {t('seeAll')} →
           </Link>
